@@ -1,3 +1,17 @@
+#Arian's Comments
+
+This challenge took me about 3 hours to complete. I couldn't add unit testing due to the time constraints, but I was able to add the Starred screen
+
+- I used Chakra UI as my base style library since I've used it before, I like the look and feel it has, and I find it fun to use
+- I used axios for the requests since it's pretty quick and easy to use
+- I used lodash debounce for the search requests. This is something I've done in the past for the very same requirements
+
+There's room for improvement here. I used context to keep track of the starred results, but I didn't store any clicked item in local memory. Because of this the starred results request is being called everytime the search results change on the Search tab. This is far from ideal and there are better approaches for this case, but I was running out of time and the solution I used was pretty quick to implement.
+
+I had some ideas while coding that I left outside because of the time, such as highlighting text that matches the query on each result, or adding more search options like searching only animals, products or companies.
+
+Thanks for reading!
+
 # fe-interview-backend
 
 This repository contains a local mock backend server for the brightwheel frontend coding challenge as well as an empty React app using `create-react-app`, which you should use as a starting point.
