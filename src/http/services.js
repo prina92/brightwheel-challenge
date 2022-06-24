@@ -1,10 +1,13 @@
 import axios from "axios";
 import { COMMON_BACKEND_KEYS } from "../constants";
 
+// Normally we'd use env variables for this
+const baseURL = 'http://localhost:3001';
+
 const {ID, STARRED} = COMMON_BACKEND_KEYS;
 
 const instance = axios.create({
-    baseURL: process.env.REACT_APP_ENDPOINT_URL,
+    baseURL,
     headers: { 'Content-Type': 'application/json' },
 });
 

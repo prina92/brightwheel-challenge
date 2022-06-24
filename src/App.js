@@ -7,6 +7,7 @@ import Header from 'components/Header';
 
 function App() {
     const {starredCount} = useContext(AppContext);
+
     const toast = useToast();
     const showErrorToast = (message) => {
         toast({
@@ -17,6 +18,7 @@ function App() {
             status: 'warning',
         })
     };
+
     return (
         <div className="App">
             <Flex direction="column" align="center" bg="gray.100" minH="100vh">

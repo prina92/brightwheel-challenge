@@ -5,9 +5,8 @@ import { AppContext } from "context/appContext";
 import {searchService, markItem} from "http/services";
 import SearchControls from "components/SearchControls";
 import ResultsTable from "components/ResultsTable";
-import {SEARCH_TYPES, COMMON_BACKEND_KEYS} from "../../constants";
+import {COMMON_BACKEND_KEYS} from "../../constants";
 
-const {ALL} = SEARCH_TYPES;
 const {ID} = COMMON_BACKEND_KEYS;
 
 const SearchView = ({setErrorToast}) => {
@@ -28,7 +27,7 @@ const SearchView = ({setErrorToast}) => {
         } else {
             setSearchResults(null);
         }
-    }, [searchValue, debouncedSearch]);
+    }, [searchValue, debouncedSearch, setSearchResults]);
 
     const updateResults = updatedItem => {
         const itemIndex = searchResults.findIndex(item => item[ID] === updatedItem[ID]);

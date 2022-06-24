@@ -11,8 +11,6 @@ export const ContextProvider = ({children}) => {
     const [starredCount, setStarredCount] = useState(0);
     const [searchResults, setSearchResults] = useState(null);
 
-    const updateValue = value => setStarredCount(value);
-
     return (
         <AppContext.Provider
             value={{
